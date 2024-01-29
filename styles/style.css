@@ -1,5 +1,239 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* .page {
+  сохраните в разметке и стилях класс page. На его основе работает скрипт. 
+} */
+
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  min-inline-size: 100%;
+  background-image: url(../images/cover-image-dark.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: var(--font-family-style, sans-serif);
 }
+
+.header {
+  min-inline-size: 100%;
+  display: grid;
+  grid-template-rows: 3fr;
+  position: relative;
+  z-index: 0;
+}
+
+.rec {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  right: 0;
+}
+
+.rec-style {
+  color: var(--accent-color);
+  font-family: var(--font-family-style, sans-serif);
+  font-size: var(--main-font-size);
+  font-style: var(--main-font-style);
+  font-weight: var(--main-font-weight);
+  line-height: 138.889%;
+}
+
+.rec::after {
+  content: url("../images/Ellipse 4.png");
+  margin: 8px 9px 8px 10px;
+}
+
+.header__theme-menu {
+  justify-self: end;
+  align-self: start;
+  margin-top: 17.3%;
+  margin-bottom: 65px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.header__theme-menu-item {
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 1.5px;
+  padding-bottom: 1.5px;
+  color: var(--accent-color);
+  font-size: var(--main-font-size);
+  font-style: var(--main-font-style);
+  font-weight: var(--main-font-weight);
+  line-height: var(--main-line-height);
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+  text-transform: lowercase;
+} 
+
+button:focus { /*работает не корректно*/
+  outline: none; 
+} 
+
+button:focus { 
+  outline: none; /*работает не корректно*/
+  border-bottom: 1px solid;
+}
+
+.header__theme-menu-item:hover { /*работает не корректно*/
+  outline: 1px solid ; 
+  cursor: pointer;
+}
+
+button:active {
+  cursor: pointer;
+  border-bottom: none; /*работает не корректно*/
+}
+
+.text-main {
+  color: var(--main-header-text-color);
+  text-shadow: 4px 4px 0px var(--accent-color);
+  font-size: var(--header-font-size);
+  line-height: var(--header-text-line-height);
+}
+
+.main-header{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  margin-bottom: 55px;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  margin-block-end: 55px;
+}
+
+.accent-text {
+  color: var(--accent-text-color);
+  font-size: var(--main-font-size);
+  font-style: var(--main-font-style);
+  font-weight: var(--accent-font-weight);
+  line-height: var(--main-line-height);
+} 
+
+.main {
+  min-inline-size: 100%;
+  background-color: var(--color-dark-theme);
+  margin-top: 50px; /*ЗНАЧЕНИЯ ПЕРЕВЕСТИ В ПРОЦЕНТЫ?*/
+  margin-bottom: 40px; /*ЗНАЧЕНИЯ ПЕРЕВЕСТИ В ПРОЦЕНТЫ?*/
+}
+
+.article {
+  /* margin-block-start: 10.6%; */
+}
+
+.main-points {
+  color: var(--accent-color);
+  font-family: var(--font-family-style);
+  font-size: var(--main-font-size);
+  font-style: var(--main-font-style);
+  font-weight: var(--accent-font-weight);
+  line-height: var(--main-line-height);
+  margin-block-end: 20px;
+}
+
+.title-margin {
+  margin-block-end: 10px; /*ЗНАЧЕНИЯ ПЕРЕВЕСТИ В ПРОЦЕНТЫ?*/
+}
+
+.card {
+  color: var(--main-text-color);
+  font-family: var(--font-family-style);
+  font-size: var(--main-font-size);
+  font-style: var(--main-font-style);
+  font-weight: var(--main-font-weight);
+  line-height: var(--main-line-height);
+  margin-block-end: 5.3%;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link-style {
+  text-shadow: 2px 2px 0px var(--accent-color);
+  font-family: var(--font-family-style, sans-serif);
+  font-size: var(--main-font-size);
+  font-style: var(--main-font-style);
+  font-weight: var(--main-font-weight);
+  line-height: var(--line-heiht);
+}
+
+.link:hover {
+  border-bottom: 1px solid;
+}
+ 
+.link:focus {
+  outline: 1px solid; 
+}
+
+.card:last-child {
+  margin-bottom: 50px; /*ЗНАЧЕНИЯ ПЕРЕВЕСТИ В ПРОЦЕНТЫ?*/
+}
+
+.subtitle-text {
+  color: var(--accent-text-color);
+  font-family: var(--font-family-style, sans-serif);
+  font-size: var(--main-font-size);
+  font-style: var(--main-font-style);
+  font-weight: var(--main-font-weight);
+  line-height: var(--main-line-height); 
+}
+
+.images-block {
+  display: grid;
+  flex-direction: column;
+  max-width: 100%;
+  gap: 10px;
+}
+
+.image {
+  max-width: 100%;
+}
+
+.footer {
+  display: flex;
+  padding: 2.6%;
+  height: 100vh;
+  background: var(--color-dark-theme);
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.footer-text-shadow {
+  text-shadow: 2px 2px 0px var(--accent-color);
+}  
+
+.decorated-zone::after {
+  position: absolute;
+  content: "";
+  inline-size: 25px;
+  block-size: 25px;
+  bottom: 0px;
+  left: 0px;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+}
+
+.decorated-zone::before {
+  position: absolute;
+  content: "";
+  inline-size: 25px;
+  block-size: 25px;
+  top: 0px;
+  right: 0px;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+} 
