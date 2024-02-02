@@ -510,7 +510,6 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
-  height: 100vh;
   min-height: 667px;
 }
 
