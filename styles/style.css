@@ -19,7 +19,6 @@
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   position: relative;
-  z-index: 0;
   height: 100vh;
   min-height: 668px;
   padding: 2.6%;
@@ -29,7 +28,6 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  z-index: 1;
   top: 11px;
   right: 26px;
   height: 26px;
@@ -263,7 +261,7 @@
 
 @media (min-width: 768px) {
   .main {
-    padding: 5.21% 2.60%;
+    padding: 7.81% 2.60%;
     min-width: 100%;
   }
 
@@ -277,51 +275,22 @@
     width: 33px;
 }
 
-  .main-points {
-    /* max-width: 315px; */
-  }
-
   .first-article {
     display: grid;
     grid-template-columns: 30% 1fr;
-    column-gap: 20px;
+    gap: 20px;
   }
 
-  .header-dophamine {
-    grid-column-start: 2;
-    grid-column-end: 3;
+  .main-points {
+    align-self: start;
   }
 
-  .first-card {
-    grid-column-start: 2;
-    grid-column-end: 3;
+  .text-content {
+    justify-self: end;
+    max-width: 472px;
+    margin-bottom: 80px;
   }
-
-  .second-card {
-    grid-column-start: 2;
-    grid-column-end: 3;
-  }
-
-  .third-article {
-    display: grid;
-    grid-template-columns: min-content 1fr;
-    column-gap: 20px;
-  }
-
   
-  .subtitle-text {
-    grid-column-start: 2;
-    grid-column-end: 3;
-  }
-
-  .card {
-    grid-column-start: 2;
-    grid-column-end: 3;
-  }
-
-  .card:last-child {
-    margin-bottom: 80px; /*ЗНАЧЕНИЯ ПЕРЕВЕСТИ В ПРОЦЕНТЫ? поправить нижний отступ у последнего параграфа*/
-  }
 
 
   @media (min-width: 1024px) {
