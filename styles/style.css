@@ -283,12 +283,12 @@
 
   .main-points {
     align-self: start;
+    max-width: 236px;
   }
 
   .text-content {
     justify-self: end;
     max-width: 472px;
-    margin-bottom: 80px;
   }
   
 
@@ -300,7 +300,6 @@
     grid-template-rows: repeat(2, min-content);
     row-gap: 20px;
     column-gap: 20px;
-    margin-bottom: 80px;
     }
 
     .second-article .multitask {
@@ -389,7 +388,7 @@
 }
 
 .card:last-child {
-  margin-bottom: 50px; /*ЗНАЧЕНИЯ ПЕРЕВЕСТИ В ПРОЦЕНТЫ?*/
+  margin-bottom: 80px; 
 }
 
 .subtitle-text {
