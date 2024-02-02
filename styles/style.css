@@ -150,7 +150,6 @@
   margin-top: 55px;
 }
 
-
 /*Медиазапросы для хэдера*/
 
 @media (width >= 768px) {
@@ -227,19 +226,10 @@
     align-self: start;
   }
 
-  .header__theme-menu {
-    justify-self: center;
-    align-self: start;
-    margin-top: 10px;
-  }
-
   .header__theme-menu-list {
     flex-direction: row;
   }
-
 }
-
-/**/
 
 .main {
   padding: 40px 10px;
@@ -249,7 +239,7 @@
 
 .main-points {
   color: var(--accent-color);
-  font-family: var(--font-family-style);
+  font-family: var(--font-family-style, ans-serif);
   font-size: var(--main-font-size);
   font-style: var(--main-font-style);
   font-weight: var(--accent-font-weight);
@@ -257,7 +247,7 @@
   margin-block-end: 20px;
 }
 
-/*Медиазапросы для карточек в main - Уточнить размеры*/
+/*Медиазапросы для карточек в main*/
 
 @media (min-width: 768px) {
   .main {
@@ -283,23 +273,54 @@
 
   .main-points {
     align-self: start;
-    max-width: 236px;
+    min-width: 236px;
+    justify-self: start;
   }
 
   .text-content {
     justify-self: end;
     max-width: 472px;
   }
-  
 
+  article.third-article {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    gap: 20px;
+  }
+  
+  .third-article.main-points {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+  .text-article-content {
+    max-width: 472px;
+    justify-self: end;
+}
 
   @media (min-width: 1024px) {
+    .main {
+      padding: 60px 20px;
+      min-width: 100%;
+    }
+
+    .main-points {
+      max-width: 315px;
+      justify-self: start;
+    }
+    
+    .text-content {
+      min-width: 649px;
+    }
     .second-article {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, min-content);
-    row-gap: 20px;
     column-gap: 20px;
+    }
+
+    .text-article-content {
+      min-width: 649px;
     }
 
     .second-article .multitask {
@@ -340,25 +361,20 @@
       grid-row-start: 3;
       grid-row-end: 4;
     }
-
-    
-
-
   }
 }
-/**/
 
 .title-margin {
-  margin-block-end: 10px; /*ЗНАЧЕНИЯ ПЕРЕВЕСТИ В ПРОЦЕНТЫ?*/
+  margin-block-end: 10px; 
 }
 
-.advices-title {
+.content-subtitle {
   margin-block-end: 20px;
 }
 
 .card {
   color: var(--main-text-color);
-  font-family: var(--font-family-style);
+  font-family: var(--font-family-style, ans-serif);
   font-size: var(--main-font-size);
   font-style: var(--main-font-style);
   font-weight: var(--main-font-weight);
@@ -419,8 +435,7 @@
   .images-block {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* grid-template-rows: repeat(4, minmax(192px, 1fr)); */
-    grid-template-rows: 192px 230px repeat(2, 1fr);
+    grid-template-rows: 192px 230px 1fr;
     gap: 20px;
     grid-auto-rows: 192px;
   }
@@ -430,12 +445,10 @@
   }
 
   .image-1 {
-    /*свернуть в одну строку grid area - последовательность!*/
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 3;
-    /* max-height: 192px; */
   }
 
   .image-2 {
@@ -467,6 +480,16 @@
     grid-column-start: 2;
     grid-column-end: 4;
   }
+  }
+
+  @media (width >= 1024px) {
+    .images-block {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 260px 315px 1fr;
+      gap: 20px;
+      grid-auto-rows: 260px;
+    }
   }
 
 .footer {
