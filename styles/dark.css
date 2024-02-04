@@ -4,7 +4,6 @@
   переключая тему
 */
 
-
 .page.theme_dark {
   --background-image: url(../images/cover-image-dark.png);
   --color-theme: #000028;
@@ -22,7 +21,8 @@
   --main-line-height: 130%;
   --line-heiht: normal;
   --header-text-line-height: 82.5%;
-  --border-color-dark: #ff0070;
+  --border-color: #ff0070;
+  --menu-color: #ff0070;
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
@@ -31,7 +31,7 @@
 
 .page.theme_dark .decorated-zone::after,
 .page.theme_dark .decorated-zone::before {
-  border-color: var(--border-color-dark);
+  border-color: var(--border-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -52,11 +52,12 @@
     --main-line-height: 130%;
     --line-heiht: normal;
     --header-text-line-height: 82.5%;
-    --border-color-dark: #ff0070;
+    --border-color: #ff0070;
+    --menu-color: #ff0070;
   }
 
   .page.theme_dark .decorated-zone::after,
   .page.theme_dark .decorated-zone::before {
-    border-color: var(--border-color-dark);
+    border-color: var(--border-color);
   }
 }

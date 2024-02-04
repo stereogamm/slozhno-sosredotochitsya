@@ -4,7 +4,6 @@
 } */
 
 .page {
-  min-inline-size: 100%;
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-position: center;
@@ -54,8 +53,8 @@
   height: 25px;
   bottom: 10px;
   left: 10px;
-  border-inline-start: 1px solid var(--border-color-dark);
-  border-block-end: 1px solid var(--border-color-dark);
+  border-inline-start: 1px solid var(--border-color);
+  border-block-end: 1px solid var(--border-color);
 }
 
 .decorated-zone::before {
@@ -65,8 +64,8 @@
   height: 25px;
   top: 10px;
   right: 10px;
-  border-block-start: 1px solid var(--border-color-dark);
-  border-inline-end: 1px solid var(--border-color-dark);
+  border-block-start: 1px solid var(--border-color);
+  border-inline-end: 1px solid var(--border-color);
 }
 
 .header__theme-menu {
@@ -98,6 +97,7 @@
   background-color: transparent;
   text-transform: lowercase;
   border: none;
+  cursor: pointer;
 }
 
 button:focus {
@@ -110,17 +110,16 @@ button:focus {
 
 .header__theme-menu-item:hover {
   outline: 1px solid;
-  cursor: pointer;
 }
 
 .header__theme-menu-item:active {
   outline: 1px solid;
 }
 
-.header__theme-menu-item.header__theme-menu-button_active {
-  pointer-events: none;
-  border: 1px solid;
-}
+.header__theme-menu-item:has(.header__theme-menu-button_active) {
+    pointer-events: none;
+    outline: 1px solid;
+} 
 
 .text-main {
   color: var(--main-header-text-color);
@@ -153,6 +152,7 @@ button:focus {
 .header-accent-text .title-decor {
   margin-top: 55px;
 }
+
 
 /*Медиазапросы для хэдера*/
 
@@ -203,8 +203,8 @@ button:focus {
     height: 25px;
     bottom: 20px;
     left: 20px;
-    border-inline-start: 1px solid var(--border-color-dark);
-    border-block-end: 1px solid var(--border-color-dark);
+    border-inline-start: 1px solid var(--border-color);
+    border-block-end: 1px solid var(--border-color);
   }
 
   .decorated-zone::before {
@@ -214,8 +214,8 @@ button:focus {
     height: 25px;
     top: 20px;
     right: 20px;
-    border-block-start: 1px solid var(--border-color-dark);
-    border-inline-end: 1px solid var(--border-color-dark);
+    border-block-start: 1px solid var(--border-color);
+    border-inline-end: 1px solid var(--border-color);
   }
 }
 
@@ -336,7 +336,7 @@ button:focus {
 
   .first-article {
     display: grid;
-    grid-template-columns: 30% 1fr;
+    grid-template-columns: 0.97fr 2fr;
     gap: 20px;
   }
 
@@ -351,9 +351,9 @@ button:focus {
     max-width: 472px;
   }
 
-  article.third-article {
+  section.third-article {
     display: grid;
-    grid-template-columns: 0.99fr 1fr;
+    grid-template-columns: 0.97fr 2fr;
     gap: 20px;
   }
 
