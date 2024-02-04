@@ -10,7 +10,7 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  font-family: var(--font-family-style, sans-serif);
+  font-family: var(--font-family-style, monospace);
 }
 
 .header {
@@ -35,11 +35,12 @@
 
 .rec-style {
   color: var(--accent-color);
-  font-family: var(--font-family-style, sans-serif);
+  font-family: var(--font-family-style, monospace);
   font-size: var(--main-font-size);
   font-style: var(--main-font-style);
   font-weight: var(--main-font-weight);
   line-height: 138.889%;
+  text-transform: uppercase;
 }
 
 .rec::after {
@@ -94,15 +95,16 @@
 }
 
 .header__theme-menu-button {
-  all: unset;
+  background-color: transparent;
   text-transform: lowercase;
+  border: none;
 }
 
-.header__theme-menu-button:focus {
+button:focus {
   outline: none;
-}
+} 
 
-.header__theme-menu-button:focus-visible {
+.header__theme-menu-item:focus-within {
   border-bottom: 1px solid;
 }
 
@@ -241,7 +243,7 @@
 
 .main-points {
   color: var(--accent-color);
-  font-family: var(--font-family-style, sans-serif);
+  font-family: var(--font-family-style, monospace);
   font-size: var(--main-font-size);
   font-style: var(--main-font-style);
   font-weight: var(--accent-font-weight);
@@ -259,7 +261,7 @@
 
 .card {
   color: var(--main-text-color);
-  font-family: var(--font-family-style, ans-serif);
+  font-family: var(--font-family-style, monospace);
   font-size: var(--main-font-size);
   font-style: var(--main-font-style);
   font-weight: var(--main-font-weight);
@@ -277,7 +279,7 @@
 
 .link-style {
   text-shadow: 2px 2px 0px var(--text-shadow);
-  font-family: var(--font-family-style, sans-serif);
+  font-family: var(--font-family-style, monospace);
   font-size: var(--main-font-size);
   font-style: var(--main-font-style);
   font-weight: var(--main-font-weight);
@@ -294,7 +296,7 @@
 
 .subtitle-text {
   color: var(--accent-text-color);
-  font-family: var(--font-family-style, sans-serif);
+  font-family: var(--font-family-style, monospace);
   font-size: var(--main-font-size);
   font-style: var(--main-font-style);
   font-weight: var(--main-font-weight);
@@ -351,7 +353,7 @@
 
   article.third-article {
     display: grid;
-    grid-template-columns: 30% 1fr;
+    grid-template-columns: 0.99fr 1fr;
     gap: 20px;
   }
 
